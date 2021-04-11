@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.7
+-- version 4.9.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Apr 11, 2021 at 01:43 AM
--- Server version: 5.7.32
--- PHP Version: 7.4.12
+-- Generation Time: Apr 11, 2021 at 01:55 AM
+-- Server version: 5.7.30
+-- PHP Version: 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,39 +17,16 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `formularioCOntacto`
---
-
-CREATE TABLE `formularioCOntacto` (
-  `id_formularioContacto` int(11) NOT NULL,
-  `nombre` varchar(255) DEFAULT NULL,
-  `correo` varchar(250) DEFAULT NULL,
-  `asunto` varchar(250) DEFAULT NULL,
-  `mensaje` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `formularioCOntacto`
---
-
-INSERT INTO `formularioCOntacto` (`id_formularioContacto`, `nombre`, `correo`, `asunto`, `mensaje`) VALUES
-(1, 'Juan Omar Camacho', 'omar@gmail.com', 'Prueba', 'wasedfasfgvsadfds'),
-(2, 'Juan Omar Camacho', 'omar@gmail.com', 'Prueba', 'wasedfasfgvsadfds'),
-(3, 'Juan Omar Camacho', 'omar@gmail.com', 'Prueba', 'wasedfasfgvsadfds');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `productos`
 --
 
 CREATE TABLE `productos` (
   `id_producto` int(11) NOT NULL,
-  `nombre` varchar(500) DEFAULT NULL,
-  `urlImagen` varchar(1000) DEFAULT NULL,
-  `descripcion` text,
-  `precio` varchar(50) DEFAULT NULL,
-  `destacados` tinyint(1) DEFAULT NULL
+  `nombre` varchar(500) NOT NULL,
+  `urlImagen` varchar(1000) NOT NULL,
+  `descripcion` text NOT NULL,
+  `precio` varchar(50) NOT NULL,
+  `destacados` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -67,12 +44,6 @@ INSERT INTO `productos` (`id_producto`, `nombre`, `urlImagen`, `descripcion`, `p
 --
 
 --
--- Indexes for table `formularioCOntacto`
---
-ALTER TABLE `formularioCOntacto`
-  ADD PRIMARY KEY (`id_formularioContacto`);
-
---
 -- Indexes for table `productos`
 --
 ALTER TABLE `productos`
@@ -81,12 +52,6 @@ ALTER TABLE `productos`
 --
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `formularioCOntacto`
---
-ALTER TABLE `formularioCOntacto`
-  MODIFY `id_formularioContacto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `productos`
