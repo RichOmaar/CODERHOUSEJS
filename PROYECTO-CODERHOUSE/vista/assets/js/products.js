@@ -1,3 +1,4 @@
+//Hace una petición al controlador products.controlador.js
 $(document).ready(function () {
     let ctrProducts = new controladorProducts();
     //resultado es lo que me trajo ajax del controlador
@@ -6,12 +7,10 @@ $(document).ready(function () {
         obtenerProductos(_respuesta);
     });
 });
-
+//Esta función permite crear los cards con todos los productos obtenidos de la base de datos.
 const obtenerProductos = function (soapProducts) {
 
-    soapProducts.forEach (Element => {
-        console.log(soapProducts);
-        
+    soapProducts.forEach(Element => {
         let firstContainer = document.createElement("div");
         firstContainer.setAttribute("data.id",`${Element.id_producto}`);
         firstContainer.setAttribute("class","col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 pb-5 font animations");
@@ -61,7 +60,7 @@ const obtenerProductos = function (soapProducts) {
         sixthContainer.appendChild(anchorButton);
     
         let cartButton = document.createElement("span");
-        cartButton.setAttribute("class","text-uppercase");
+        cartButton.setAttribute("class","text-uppercase agregar-carrito");
         cartButton.setAttribute("style","color: #373d31;");
         cartButton.textContent = "Agregar al carrito";
         anchorButton.appendChild(cartButton);

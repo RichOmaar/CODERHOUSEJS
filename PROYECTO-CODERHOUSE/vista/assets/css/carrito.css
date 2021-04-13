@@ -1,0 +1,39 @@
+.back-button-div{
+    padding-top: 120px;
+    line-height: 100px;
+    transition: .5s;
+}
+
+.back-button-icon{
+    font-size: larger;
+}
+
+.back-button-div:hover{
+    font-size: larger;
+    transition: .5s;
+}
+.inputCantidad{
+    width: 50px!important;
+    border-style: none!important;
+    text-align: center;
+}
+
+.minusButton{
+    font-size: x-large;
+    transition: .5s;
+}
+
+.plusButton{
+    font-size: x-large;
+    transition: .5s;
+}
+
+.minusButton:hover{
+    transition: .5s;
+    font-size: xx-large;
+}
+
+.plusButton:hover{
+    transition: .5s;
+    font-size: xx-large;
+}

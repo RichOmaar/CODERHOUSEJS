@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="vista/assets/css/formularioContacto.css">
     <link rel="stylesheet" href="vista/assets/css/footer.css">
     <link rel="stylesheet" href="vista/assets/css/valores.css">
+    <link rel="stylesheet" href="vista/assets/css/carrito.css">
 
     <!--Font-->
 
@@ -52,55 +53,28 @@
                 <img class="menu-logo" src="vista/assets/images/aria_logo_01.svg" alt="">
             </a>
             <ul class="fixed-menu" id="menuOptios">
-                <!-- <li><a href="#" class="active">Descubre</a></li> -->
-                <li><a id="menuNosotros" href="#nosotros" class="active">Nosotros</a></li>
-                <li><a id="menuShop" href="#products" class="">Shop</a></li>
-                <li><a id="menuContacto" href="#contacto" class="">Contacto</a></li>
-                <!-- <li><a href="#"><i class='bx bx-cart-alt menu-icon font'></i>Carrito</a></li>
-                <li><a href="#"><i class='bx bx-user menu-icon font'></i>Mi cuenta</a></li> -->
-                <li><a id="menuCarrito" href="carrito.html" class=""><i class='bx bx-cart-alt menu-icon'></i><span id="items-carrito" class="items-carrito" style="display: none;"></span></a></li>
+                <li><a id="menuCarrito" href="vista/modulos/carrito.html" class="active"><i class='bx bx-cart-alt menu-icon'></i><span id="items-carrito" class="items-carrito" style="display: none;"></span></a></li>
                 <li><a id="menuUsuario" href="#" class=""><i class='bx bx-user menu-icon'></i></a></li>
             </ul>
         </nav>
     </div>
     <!-- FIN MENU -->
+    
+    
 
-    <!-- VALORES -->
-    <div class="container pt-5 pb-5 text-center" id="nosotros">
-        <div class="row font" style="margin-top: 80px;">
-            <div class="col-6 texto-valores">
-            <h1 class="font" style="font-weight: lighter;">Soul & Body</h1>
-                <div class="row">
-                    <div class="col-12">
-                        <span><i class='bx bx-donate-heart' style="font-size: 28px;"></i>“Cuidado del alma y el cuerpo. Creemos que podemos estar en paz y armonía con nuestro entorno.”</span>
-                    </div>
-                </div>     
+    <!-- CARRITO -->
+    <div class="container-fluid">
+        <div class="container">
+            <!-- BACK BUTTON -->
+            <div class="container back-button-div font" id="back-button">
+                <a href=""><i class='bx bx-arrow-back back-button-icon'></i>Regresar</a>
             </div>
-            <div class="col-6">
-                <video class="embed-responsive embed-responsive-1by1" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-                    <source src="vista/assets/images/video-1.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div>
-        <br>
-        <br>
-        <div class="row font">
-            <div class="col-6">
-                <video class="embed-responsive embed-responsive-1by1" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-                    <source src="vista/assets/images/video-2.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="col-6 texto-valores">
-                <h1 class="font" style="font-weight: lighter;">Organic & Natural</h1>
-                <div class="row">
-                    <div class="col-12">
-                        <span><i class='bx bx-donate-heart' style="font-size: 28px;"></i>“Brindemos a nuestro cuerpo un shot de energía con productos que la naturaleza crea, respetándola.”</span>
-                    </div>
-                </div>    
-            </div>
+            <!-- FIN BACK BUTTON -->
+            <div class="row font d-flex justify-content-center">
+                
         </div>
     </div>
-    <!-- FIN VALORES -->
+    <!-- FIN CARRITO -->
 
     <!-- SLIDER -->
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -139,61 +113,6 @@
     </div>
     <!-- FIN SLIDER -->
     
-    <!-- PRODUCTOS -->
-    <div class="container mb-5 mt-5">
-        <div class="row" id="products">
-            
-        </div>
-    </div>
-    <!-- FIN PRODUCTOS -->
-
-    <!-- FORMULARIO DE CONTACTO -->
-    <div class="container">
-        <div class="row font">
-            <div class="col-xl-6 text-center d-block">
-                <div class="pt-5 pb-3">
-                    <h1 style="font-weight: lighter;">Contáctanos</h1>
-                </div>
-                <div class="pt-3 pb-5">
-                    <img src="vista/assets/images/formulario-contacto.svg" class="img-fluid" alt="Responsive image">
-                </div>
-            </div>
-            <div class="col-xl-4 d-flex align-items-center align-content-center" id="contacto">
-                <form style="font-weight: lighter;" id="contact-form">
-                    <div class="form-group">
-                      <label for="inputName">Nombre</label>
-                      <input name="inputName" type="text" class="form-control" id="inputName" aria-describedby="nameHelp" required>
-                      <small id="nameHelp" class="form-text text-muted">Ingresa tu nombre completo</small>
-                    </div>
-                    <div class="form-group">
-                      <label for="inputEmail">Email</label>
-                      <input name="inputEmail" type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" required>
-                      <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu correo con nadie más</small>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputSubject">Asunto</label>
-                        <input name="inputSubject" type="text" class="form-control" id="inputSubject" aria-describedby="subjectHelp" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputTextarea">¿Cómo podemos ayudarte?</label>
-                        <textarea class="form-control" id="inputTextarea" rows="3" aria-describedby="textAreaHelp" required></textarea>
-                        <small id="textAreaHelp" class="form-text text-muted">Déjanos saber cómo podemos ayudarte</small>
-                    </div>
-                    <div class="form-group text-center">
-                        <button type="submit" class="btn btn-contactar">Enviar</button>
-                    </div>
-                    <div class="warning form-group text-center" id="warning">
-                            
-                    </div>
-                  </form>
-            </div>
-            <div class="col-xl-2">
-
-            </div>
-        </div>
-    </div>
-    <!-- FIN FORMULARIO DE CONTACTO -->
-
     <!-- FOOTER -->
     <div class="container-fluid separador-footer pt-5 pb-5" style="background-color: #b1b2aa;">
         <div class="container">
@@ -256,20 +175,5 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
     -->
-    <!-- JS PROPIO -->
-
-    <script src="vista/assets/js/global.js"></script>
-    <script src="vista/assets/js/datos.js"></script>
-    <script src="vista/assets/js/products.controlador.js"></script>
-    <script src="vista/assets/js/products.js"></script>
-    <script src="vista/assets/js/formularioContacto.controlador.js"></script>
-    <script src="vista/assets/js/formularioContacto.js"></script>
-    <script src="vista/assets/js/carrito.js"></script>
-    <script src="vista/assets/js/menu.js"></script>
-
-    <script>
-      var url = "<?php echo $url; ?>";
-    </script>
-         
   </body>
 </html>
