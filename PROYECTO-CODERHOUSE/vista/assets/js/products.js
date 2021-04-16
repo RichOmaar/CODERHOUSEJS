@@ -5,6 +5,8 @@ $(document).ready(function () {
     ctrProducts.obtenerProductos().then((respuesta) => {
         let _respuesta = JSON.parse(respuesta);
         obtenerProductos(_respuesta);
+        let datos = localStorage.setItem("idProduct",idSelected);
+
     });
 });
 //Esta función permite crear los cards con todos los productos obtenidos de la base de datos.

@@ -28,6 +28,5 @@ function agregarId(id){
         idSelected.push(id);
     }
     //Guardar en local storage los productos seleccionados.
-    localStorage.setItem("idProduct",idSelected);
+    localStorage.setItem("idProduct",JSON.stringify(idSelected));
 }
-

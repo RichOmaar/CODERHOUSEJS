@@ -7,6 +7,9 @@
     <!-- Fontawesome-->
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
+    <!-- AOS Animaciones -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -43,7 +46,9 @@
     ?> -->
     <!-- MENU -->
     <div class="container-fluid" style="position: fixed; z-index: 10; padding-left: 0px; padding-right: 0px;">
-        <nav class="font" id="mainMenu">
+        <nav class="font" id="mainMenu" data-aos="fade-down"
+                                        data-aos-easing="linear"
+                                        data-aos-duration="1750">
             <input type="checkbox" id="check">
             <label for="check" class="checkbtn">
                 <i class='bx bx-menu' ></i>
@@ -68,7 +73,7 @@
     <!-- VALORES -->
     <div class="container pt-5 pb-5 text-center" id="nosotros">
         <div class="row font" style="margin-top: 80px;">
-            <div class="col-6 texto-valores">
+            <div data-aos="fade-right" class="col-6 texto-valores">
             <h1 class="font" style="font-weight: lighter;">Soul & Body</h1>
                 <div class="row">
                     <div class="col-12">
@@ -76,7 +81,7 @@
                     </div>
                 </div>     
             </div>
-            <div class="col-6">
+            <div data-aos="fade-right" class="col-6">
                 <video class="embed-responsive embed-responsive-1by1" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
                     <source src="vista/assets/images/video-1.mp4" type="video/mp4">
                 </video>
@@ -85,12 +90,12 @@
         <br>
         <br>
         <div class="row font">
-            <div class="col-6">
+            <div data-aos="fade-left" class="col-6">
                 <video class="embed-responsive embed-responsive-1by1" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
                     <source src="vista/assets/images/video-2.mp4" type="video/mp4">
                 </video>
             </div>
-            <div class="col-6 texto-valores">
+            <div data-aos="fade-left" class="col-6 texto-valores">
                 <h1 class="font" style="font-weight: lighter;">Organic & Natural</h1>
                 <div class="row">
                     <div class="col-12">
@@ -141,7 +146,7 @@
     
     <!-- PRODUCTOS -->
     <div class="container mb-5 mt-5">
-        <div class="row" id="products">
+        <div class="row" id="products" data-aos="zoom-in-up">
             
         </div>
     </div>
@@ -259,12 +264,16 @@
     <!-- JS PROPIO -->
 
     <script src="vista/assets/js/global.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
     <script src="vista/assets/js/datos.js"></script>
     <script src="vista/assets/js/products.controlador.js"></script>
     <script src="vista/assets/js/products.js"></script>
     <script src="vista/assets/js/formularioContacto.controlador.js"></script>
     <script src="vista/assets/js/formularioContacto.js"></script>
+    <script src="vista/assets/js/carrito.controlador.js"></script>
     <script src="vista/assets/js/carrito.js"></script>
+    <script src="vista/assets/js/mostrarCarrito.js"></script>
     <script src="vista/assets/js/menu.js"></script>
 
     <script>
