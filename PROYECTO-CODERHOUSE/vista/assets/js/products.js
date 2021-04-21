@@ -6,7 +6,6 @@ $(document).ready(function () {
         let _respuesta = JSON.parse(respuesta);
         obtenerProductos(_respuesta);
         // let datos = localStorage.setItem("products",JSON.stringify());
-
     });
 });
 //Esta función permite crear los cards con todos los productos obtenidos de la base de datos.
