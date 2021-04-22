@@ -1,6 +1,7 @@
 //Obtener la lista de productos
 const listaProducts = document.querySelector("#products");
 listaProducts.addEventListener('click', agregarProductCarrito);
+let idSelectedLocalStorage = [];
 
 function agregarProductCarrito(e) {
     e.preventDefault();
@@ -9,27 +10,31 @@ function agregarProductCarrito(e) {
         const cardProduct = e.target.parentElement.parentElement.parentElement.parentElement;
         const productId = cardProduct.getAttribute('data.id');
         if((localStorage.hasOwnProperty("idProducto"))){
-            let idSelectedLocalStorage = JSON.parse(localStorage.getItem("idProducto"));
+            idSelectedLocalStorage = JSON.parse(localStorage.getItem("idProducto")) || [];
             let agregadoCarrito = idSelectedLocalStorage.includes(productId);
             if(!agregadoCarrito){
-                localStorage.setItem("idProducto", JSON.stringify(productId));
+                idSelectedLocalStorage.push(productId);
+                console.log(idSelectedLocalStorage);
+                localStorage.setItem("idProducto", JSON.stringify(idSelectedLocalStorage));
                 agregarId(productId);
             } 
         } else{
-            localStorage.setItem("idProducto", JSON.stringify(productId));
-            let idSelectedLocalStorage = JSON.parse(localStorage.getItem("idProducto"));
+            idSelectedLocalStorage.push(productId);
+            localStorage.setItem("idProducto", JSON.stringify(idSelectedLocalStorage));
+            // idSelectedLocalStorage = JSON.parse(localStorage.getItem("idProducto")) || [];
             agregarId(productId);
         }
     }
 }
 
-const carritoStorageLocal = [];
+let carritoStorageLocal = [];
 const idSelected = [];
 
 function agregarId(id){
     idSelected.push(id);
-    localStorage.setItem("idProducto", JSON.stringify(idSelected));
     const carritoData = new controladorCarritoProductos();
+    //Consultar el elemento en localstorage y el arreglo ponerlo vacío o con el nuevo objeto
+    carritoStorageLocal = JSON.parse(localStorage.getItem("products")) || [];
     carritoData.obtenerCarritoProducto(id).then((respuesta) => {
         let _respuesta = JSON.parse(respuesta);
         let imagen = _respuesta.urlImagen;
