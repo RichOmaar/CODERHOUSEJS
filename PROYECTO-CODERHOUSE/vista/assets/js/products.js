@@ -72,6 +72,14 @@ const obtenerProductos = function (soapProducts) {
     
 }
 
+// Fade in en productos
+$("#primeraSeccionTitulo").fadeIn(1500);
+$("#primeraSeccionVideo").fadeIn(2000, function() {
+    $("#segundaSeccionTitulo").fadeIn(1500);
+    $("#segundaSeccionVideo").fadeIn(2000); 
+});
+
+// HTML paara utilizar en JS
 // <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 pb-5 font">
 //     <img src="vista/assets/images/soap-product.jpg" alt="" class="border-image-product" width="100%">
 //     <div class="card">

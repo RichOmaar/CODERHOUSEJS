@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="vista/assets/css/menu.css">
     <link rel="stylesheet" href="vista/assets/css/slider.css">
     <link rel="stylesheet" href="vista/assets/css/products.css">
+    <link rel="stylesheet" href="vista/assets/css/3d.css">
     <link rel="stylesheet" href="vista/assets/css/formularioContacto.css">
     <link rel="stylesheet" href="vista/assets/css/footer.css">
     <link rel="stylesheet" href="vista/assets/css/valores.css">
@@ -37,13 +38,6 @@
     <title>ARIA</title>
   </head>
   <body>
-    <!-- <?php
-      include 'modulos/menu.php';
-      include 'modulos/valores.php';
-      include 'modulos/slider.php';
-      include 'modulos/products.php';
-      include 'modulos/footer.php';
-    ?> -->
     <!-- MENU -->
     <div class="container-fluid" style="position: fixed; z-index: 10; padding-left: 0px; padding-right: 0px;">
         <nav class="font" id="mainMenu" data-aos="fade-down"
@@ -57,12 +51,9 @@
                 <img class="menu-logo" src="vista/assets/images/aria_logo_01.svg" alt="">
             </a>
             <ul class="fixed-menu" id="menuOptios">
-                <!-- <li><a href="#" class="active">Descubre</a></li> -->
                 <li><a id="menuNosotros" href="#nosotros" class="active">Nosotros</a></li>
                 <li><a id="menuShop" href="#products" class="">Shop</a></li>
                 <li><a id="menuContacto" href="#contacto" class="">Contacto</a></li>
-                <!-- <li><a href="#"><i class='bx bx-cart-alt menu-icon font'></i>Carrito</a></li>
-                <li><a href="#"><i class='bx bx-user menu-icon font'></i>Mi cuenta</a></li> -->
                 <li><a id="menuCarrito" href="carrito.html" class=""><i class='bx bx-cart-alt menu-icon'></i><span id="items-carrito" class="items-carrito" style="display: none;"></span></a></li>
                 <li><a id="menuUsuario" href="#" class=""><i class='bx bx-user menu-icon'></i></a></li>
             </ul>
@@ -73,7 +64,9 @@
     <!-- VALORES -->
     <div class="container pt-5 pb-5 text-center" id="nosotros">
         <div class="row font" style="margin-top: 80px;">
-            <div data-aos="fade-right" class="col-6 texto-valores">
+            <!-- Animación externa -->
+            <!-- <div data-aos="fade-right" class="col-6 texto-valores"> -->
+            <div class="col-6 texto-valores oculto" id="primeraSeccionTitulo">
             <h1 class="font" style="font-weight: lighter;">Soul & Body</h1>
                 <div class="row">
                     <div class="col-12">
@@ -81,7 +74,9 @@
                     </div>
                 </div>     
             </div>
-            <div data-aos="fade-right" class="col-6">
+            <!-- Animación externa -->
+            <!-- <div data-aos="fade-right" class="col-6"> -->
+            <div class="col-6 oculto" id="primeraSeccionVideo">
                 <video class="embed-responsive embed-responsive-1by1" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
                     <source src="vista/assets/images/video-1.mp4" type="video/mp4">
                 </video>
@@ -89,13 +84,17 @@
         </div>
         <br>
         <br>
-        <div class="row font">
-            <div data-aos="fade-left" class="col-6">
+        <div class="row font" id="segundaSeccion">
+            <!-- Animación externa -->
+            <!-- <div data-aos="fade-left" class="col-6"> -->
+            <div class="col-6 oculto" id="segundaSeccionVideo">
                 <video class="embed-responsive embed-responsive-1by1" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
                     <source src="vista/assets/images/video-2.mp4" type="video/mp4">
                 </video>
             </div>
-            <div data-aos="fade-left" class="col-6 texto-valores">
+            <!-- Animación externa -->
+            <!-- <div data-aos="fade-left class="col-6 texto-valores"> -->
+            <div class="col-6 texto-valores oculto" id="segundaSeccionTitulo">
                 <h1 class="font" style="font-weight: lighter;">Organic & Natural</h1>
                 <div class="row">
                     <div class="col-12">
@@ -152,6 +151,11 @@
     </div>
     <!-- FIN PRODUCTOS -->
 
+    <!-- MODELO 3D -->
+    <div>
+        <iframe class="modelo3d" src='https://my.spline.design/libraryhelix-643986651edbfed77dd6440a10e80cda/' frameborder='0'></iframe>
+    </div>
+    <!-- FIN MODELO 3D -->
     <!-- FORMULARIO DE CONTACTO -->
     <div class="container">
         <div class="row font">
