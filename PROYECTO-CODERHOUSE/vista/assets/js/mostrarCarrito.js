@@ -30,7 +30,7 @@ const verItemsCarrito = function(idCarritoLocal){
                                                     <h2 class="font font-color font-light">${idCarritoLocal[i].nombre}</h2>
                                                 </div>
                                                 <div class="col-1-xl col-1-lg col-md-1 col-sm-3 col-3 p-3">
-                                                    <a name="eliminar" id="eliminar"><i class='bx bx-trash font-color deleteButton'></i></a>
+                                                    <a name="eliminar" id="eliminar" ><i class='bx bx-trash font-color deleteButton'></i></a>
                                                 </div>
                                                 <div class="col-1-xl col-1-lg col-md-1 col-sm-3 col-3 p-3">
                                                     <a href="" name="cantidadPlus" id="cantidadPlus"><i class='bx bx-minus minusButton font-color'></i></a>

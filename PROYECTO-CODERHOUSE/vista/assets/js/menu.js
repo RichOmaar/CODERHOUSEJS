@@ -50,6 +50,11 @@ window.onload = () => {
         default:
             console.error("Hubo un error con el menú");
     }
+
+    const numeroProductos = JSON.parse(localStorage.getItem("idProducto"));
+    if(numeroProductos.length > 0){
+        $("#menuCarrito span").text(`(${numeroProductos.length})`);
+    }
 }
 
 const menuNosotros = document.querySelector('#menuNosotros');
@@ -86,15 +91,8 @@ menuContacto.onclick = function() {
 const menuCarrito = document.querySelector('#menuCarrito');
 console.log(menuCarrito);
 menuCarrito.onclick = function() {
-    // const numeroProductos = localStorage.getItem("idProduct");
     let elementCarritoCarrito = document.getElementById("menuCarrito");
     elementCarritoCarrito.classList.add("active");
-    //estas lineas hacen que aparezca el número de productos
-    let elementCarritoItems = document.getElementById("items-carrito");
-    // if(numeroProductos.length > 0){
-    //     elementCarritoItems.removeAttribute("style","display: none;");
-    //     elementCarritoItems.textContent = `(${numeroProductos.length})`;
-    // }
     let elementNosotrosCarrito = document.getElementById("menuNosotros");
     elementNosotrosCarrito.classList.remove("active");
     let elementProductsCarrito = document.getElementById("menuShop");

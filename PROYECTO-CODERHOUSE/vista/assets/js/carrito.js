@@ -37,13 +37,14 @@ function agregarId(id){
     carritoStorageLocal = JSON.parse(localStorage.getItem("products")) || [];
     carritoData.obtenerCarritoProducto(id).then((respuesta) => {
         let _respuesta = JSON.parse(respuesta);
+        let idProducto = _respuesta.id_producto;
         let imagen = _respuesta.urlImagen;
         let nombre = _respuesta.nombre;
         let descripcion = _respuesta.descripcion;
         let precio = _respuesta.precio;
         let destacado = _respuesta.destacados;
         let stock = _respuesta.stock;
-        carritoStorageLocal.push(new Product(imagen,nombre,descripcion,precio,destacado,stock));
+        carritoStorageLocal.push(new Product(imagen,nombre,descripcion,precio,destacado,stock,idProducto));
         localStorage.setItem("products", JSON.stringify(carritoStorageLocal));
     });
 }
