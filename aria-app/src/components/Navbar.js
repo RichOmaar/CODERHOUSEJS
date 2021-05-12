@@ -14,10 +14,9 @@ const Navbar = () => {
                 <IconButton edge="start" color="inherit" aria-label="menu">
                 <MenuIcon />
                 </IconButton>
-                <Typography variant="h6">
-                News
-                </Typography>
-                <Button color="inherit">Login</Button>
+                <Button style={{ marginInline: "auto"}} color="inherit">NOSOTROS</Button>
+                <Button style={{ marginInline: "auto"}} color="inherit">SHOP</Button>
+                <Button style={{ marginInline: "auto"}} color="inherit">CONTACTO</Button>
             </Toolbar>
         </AppBar>
     ); 
