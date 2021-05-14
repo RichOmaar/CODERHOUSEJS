@@ -1,0 +1,27 @@
+.btn-contactar {
+    transition: .5s;
+}
+
+.btn-contactar:hover {
+    /* transform: scale(1.5); */
+    font-size: larger;
+    transition: .5s;
+    background-color: #cca353;
+    color: #F7F4F0;
+    border-radius: 5px;
+    box-shadow:  8px 8px 16px #bc964c,
+             -8px -8px 16px #dcb05a;
+}
+
+input:required {
+    color: #373d31;
+}
+
+.form-control::placeholder {
+    color: #cca353!important;
+}
+
+.warning {
+    transition: all .5s;
+}
+/* ionic cap run ios -l -external */

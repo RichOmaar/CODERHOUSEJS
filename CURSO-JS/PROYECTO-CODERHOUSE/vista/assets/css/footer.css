@@ -1,0 +1,44 @@
+.espacio-redes {
+    line-height: 100px
+}
+
+.iconos-redes {
+    font-size: 30px;
+    transition: .5s;
+    display: inline-block;
+}
+
+.iconos-redes:hover {
+    font-size: 38px;
+    transition: .5s;
+}
+
+.separador-footer {
+    border-style: solid none none none;
+    border-width: 1px;
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (max-width: 575px) {
+
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (max-width: 767px) and (min-width: 576px) {
+
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (max-width: 991px) and (min-width: 768px) {
+   
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (max-width: 1199px) and (min-width: 992px) {
+
+
+}
+
+@media (min-width: 1200px){
+    
+}
