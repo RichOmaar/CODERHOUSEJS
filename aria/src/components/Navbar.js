@@ -1,6 +1,7 @@
 import react from 'react';
 import { Navbar,Nav } from 'react-bootstrap';
-import { FaShoppingCart,FaUser } from 'react-icons/fa';
+// import { FaUser } from 'react-icons/fa';
+import CartIcon from './CartIcon';
 
 export default function NavBar() {
     return (
@@ -21,8 +22,8 @@ export default function NavBar() {
                     <Nav.Link href="#nosotros">NOSOTROS</Nav.Link>
                     <Nav.Link href="#shop">SHOP</Nav.Link>
                     <Nav.Link href="#contacto">CONTACTO</Nav.Link>
-                    <Nav.Link href="#shoppingCart"><FaShoppingCart /></Nav.Link>
-                    <Nav.Link href="#user"><FaUser /></Nav.Link>
+                    <Nav.Link href="#shoppingCart"><CartIcon /></Nav.Link>
+                    {/* <Nav.Link href="#user"><FaUser /></Nav.Link> */}
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
